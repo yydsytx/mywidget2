@@ -11,12 +11,12 @@ import android.view.animation.CycleInterpolator;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-public class HeartView extends RelativeLayout {
-    public HeartView(Context context) {
+public class MyHeartView extends RelativeLayout {
+    public MyHeartView(Context context) {
         super(context);
     }
 
-    public HeartView(Context context, AttributeSet attrs) {
+    public MyHeartView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
 

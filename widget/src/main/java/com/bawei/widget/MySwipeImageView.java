@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 
 
-public class SwipeImageView extends AppCompatImageView {
+public class MySwipeImageView extends AppCompatImageView {
     private float ix,iy;
     private SwipeLister swipeLister;
     private Matrix matrix = new Matrix();
@@ -18,12 +18,12 @@ public class SwipeImageView extends AppCompatImageView {
         this.swipeLister = swipeLister;
     }
 
-    public SwipeImageView(Context context) {
+    public MySwipeImageView(Context context) {
         super(context);
 
     }
 
-    public SwipeImageView(Context context, @Nullable AttributeSet attrs) {
+    public MySwipeImageView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
     }
