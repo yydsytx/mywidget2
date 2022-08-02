@@ -101,7 +101,7 @@ public class MyProgressView extends View {
 
     }
     //结束回调接口
-    interface MyProgressListener{
+    public interface MyProgressListener{
         void onEnd();
     }
     private MyProgressListener myProgressListener;
