@@ -1,5 +1,7 @@
 package com.bawei.widget;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -85,10 +87,28 @@ public class MyProgressView extends View {
             });
             valueAnimator.setDuration(num*1000);
             valueAnimator.start();
+            valueAnimator.addListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    super.onAnimationEnd(animation);
+                    if(myProgressListener != null){
+                        myProgressListener.onEnd();
+                    }
+                }
+            });
         }
+
+
     }
+    //结束回调接口
+    interface MyProgressListener{
+        void onEnd();
+    }
+    private MyProgressListener myProgressListener;
 
 
-
-
+    public void setMyProgressListener(MyProgressListener myProgressListener) {
+        this.myProgressListener = myProgressListener;
+    }
 }
+
